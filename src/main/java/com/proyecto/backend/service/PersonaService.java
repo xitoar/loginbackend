@@ -16,8 +16,7 @@ public class PersonaService implements IPersonaService{
     
     @Override
     public boolean buscarPersona(Persona pers){
-        List<Persona> personas = persRepo.findAll();  
-        
+        List<Persona> personas = persRepo.findAll();         
         boolean aprobado = false;        
         for (Persona persona : personas) {            
             if (persona.getUsuario().equals(pers.getUsuario())&& persona.getPassword().equals(pers.getPassword()) ){
